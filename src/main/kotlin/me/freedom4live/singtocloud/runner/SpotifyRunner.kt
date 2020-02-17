@@ -3,9 +3,7 @@ package me.freedom4live.singtocloud.runner
 import com.wrapper.spotify.SpotifyApi
 import com.wrapper.spotify.SpotifyHttpManager
 import org.springframework.boot.CommandLineRunner
-import org.springframework.stereotype.Component
 
-@Component
 class SpotifyRunner : CommandLineRunner {
 
     private val CLINET_ID = "7773d63802354756b6abf06f5872fc55"
@@ -19,7 +17,7 @@ class SpotifyRunner : CommandLineRunner {
             .setRedirectUri(CLIENT_REDIRECT_URL)
             .build()
 
-    override fun run(vararg args: String?)  {
+    override fun run(vararg args: String?) {
         val execute = api.authorizationCodeUri()
                 .scope(SCOPES)
                 .build()
