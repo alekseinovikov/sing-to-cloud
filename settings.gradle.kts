@@ -1,5 +1,6 @@
 rootProject.name = "sing-to-cloud"
 
 include(
-        ":core"
+        ":application",
+        ":application:application-javafx"
 )
