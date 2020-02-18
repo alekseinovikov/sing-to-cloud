@@ -4,5 +4,8 @@ include(
         ":application:application-javafx",
 
         ":frontend:javafx:javafx-api",
-        ":frontend:javafx:javafx-impl"
+        ":frontend:javafx:javafx-impl",
+
+        ":cloud-integration:spotify:spotify-api",
+        ":cloud-integration:spotify:spotify-impl"
 )

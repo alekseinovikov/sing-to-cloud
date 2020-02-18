@@ -1,10 +1,9 @@
-package me.freedom4live.singtocloud.runner
+package me.freedom4live.singtocloud.cloud.integration.spotify.impl
 
 import com.wrapper.spotify.SpotifyApi
 import com.wrapper.spotify.SpotifyHttpManager
-import org.springframework.boot.CommandLineRunner
 
-class SpotifyRunner : CommandLineRunner {
+class SpotifyRunner {
 
     private val CLINET_ID = "7773d63802354756b6abf06f5872fc55"
     private val CLINET_SECRET = "e7ff11e152524e66b221fcddddc298d2"
@@ -17,7 +16,7 @@ class SpotifyRunner : CommandLineRunner {
             .setRedirectUri(CLIENT_REDIRECT_URL)
             .build()
 
-    override fun run(vararg args: String?) {
+    fun run(vararg args: String?) {
         val execute = api.authorizationCodeUri()
                 .scope(SCOPES)
                 .build()
