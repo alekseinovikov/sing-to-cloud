@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  me.freedom4live.singtocloud.frontend.javafx.impl.config.JavaFxConfiguration

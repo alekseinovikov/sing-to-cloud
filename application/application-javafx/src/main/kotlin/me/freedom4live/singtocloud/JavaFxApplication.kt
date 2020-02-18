@@ -1,10 +1,9 @@
 package me.freedom4live.singtocloud
 
 import javafx.application.Application
-import javafx.scene.Scene
 import javafx.stage.Stage
+import me.freedom4live.singtocloud.frontend.javafx.api.SceneManager
 import me.freedom4live.singtocloud.fx.JavaFxSupport
-import me.freedom4live.singtocloud.fx.controller.LoginController
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.autoconfigure.SpringBootApplication
 
@@ -12,12 +11,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication
 class JavaFxApplication : JavaFxSupport() {
 
     @Autowired
-    lateinit var loginController: LoginController
+    private lateinit var sceneManager: SceneManager
 
     override fun start(stage: Stage) {
         stage.title = "Sing To Cloud"
 
-        stage.scene = Scene(loginController.rootView)
+        sceneManager.init(stage)
 
         stage.minWidth = 640.0
         stage.minHeight = 480.0
