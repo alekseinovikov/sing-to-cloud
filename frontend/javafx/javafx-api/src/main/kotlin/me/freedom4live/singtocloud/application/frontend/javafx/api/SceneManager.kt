@@ -1,4 +1,4 @@
-package me.freedom4live.singtocloud.frontend.javafx.api
+package me.freedom4live.singtocloud.application.frontend.javafx.api
 
 import javafx.stage.Window
 

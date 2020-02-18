@@ -1,4 +1,4 @@
-package me.freedom4live.singtocloud.frontend.javafx.impl
+package me.freedom4live.singtocloud.application.frontend.javafx.impl
 
 import javafx.stage.Window
 import org.junit.jupiter.api.Test

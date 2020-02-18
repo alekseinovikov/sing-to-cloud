@@ -1,2 +1,2 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-  me.freedom4live.singtocloud.cloud.integration.spotify.impl.config.SpotifyIntegrationConfig
+  me.freedom4live.singtocloud.application.cloud.integration.spotify.impl.config.SpotifyIntegrationConfig

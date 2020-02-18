@@ -1,7 +1,7 @@
-package me.freedom4live.singtocloud.frontend.javafx.impl
+package me.freedom4live.singtocloud.application.frontend.javafx.impl
 
 import javafx.stage.Window
-import me.freedom4live.singtocloud.frontend.javafx.api.SceneManager
+import me.freedom4live.singtocloud.application.frontend.javafx.api.SceneManager
 
 internal class SceneManagerImpl : SceneManager {
 

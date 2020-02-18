@@ -1,4 +1,4 @@
-package me.freedom4live.singtocloud.cloud.integration.spotify.impl
+package me.freedom4live.singtocloud.application.cloud.integration.spotify.impl
 
 import com.wrapper.spotify.SpotifyApi
 import com.wrapper.spotify.SpotifyHttpManager

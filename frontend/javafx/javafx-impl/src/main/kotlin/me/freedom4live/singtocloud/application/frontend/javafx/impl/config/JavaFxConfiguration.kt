@@ -1,6 +1,6 @@
-package me.freedom4live.singtocloud.frontend.javafx.impl.config
+package me.freedom4live.singtocloud.application.frontend.javafx.impl.config
 
-import me.freedom4live.singtocloud.frontend.javafx.impl.SceneManagerImpl
+import me.freedom4live.singtocloud.application.frontend.javafx.impl.SceneManagerImpl
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 

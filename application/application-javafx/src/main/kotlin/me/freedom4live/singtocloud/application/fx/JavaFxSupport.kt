@@ -1,11 +1,10 @@
-package me.freedom4live.singtocloud.fx
+package me.freedom4live.singtocloud.application.fx
 
 import javafx.application.Application
-import me.freedom4live.singtocloud.JavaFxApplication
 import org.springframework.boot.runApplication
 import org.springframework.context.ConfigurableApplicationContext
 
-abstract class JavaFxSupport : Application() {
+internal abstract class JavaFxSupport : Application() {
 
     protected lateinit var context: ConfigurableApplicationContext
 
