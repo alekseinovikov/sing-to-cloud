@@ -1,6 +1,7 @@
 package me.freedom4live.singtocloud.application.fx
 
 import javafx.application.Application
+import javafx.application.Platform
 import org.springframework.boot.runApplication
 import org.springframework.context.ConfigurableApplicationContext
 
@@ -18,6 +19,7 @@ internal abstract class JavaFxSupport : Application() {
 
     override fun stop() {
         context.close()
+        Platform.exit()
     }
 
 }
