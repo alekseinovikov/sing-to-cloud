@@ -12,4 +12,5 @@ dependencies {
 
     api(project(":frontend:javafx:javafx-api"))
     api(project(":cloud-integration:spotify:spotify-api"))
+    api(project(":source:source-api"))
 }

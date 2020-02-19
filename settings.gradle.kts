@@ -7,5 +7,8 @@ include(
         ":frontend:javafx:javafx-impl",
 
         ":cloud-integration:spotify:spotify-api",
-        ":cloud-integration:spotify:spotify-impl"
+        ":cloud-integration:spotify:spotify-impl",
+
+        ":source:local-source",
+        ":source:source-api"
 )

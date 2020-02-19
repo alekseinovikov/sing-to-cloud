@@ -12,6 +12,7 @@ dependencies {
 
     implementation(project(":frontend:javafx:javafx-impl"))
     implementation(project(":cloud-integration:spotify:spotify-impl"))
+    implementation(project(":source:local-source"))
 
     testImplementation("org.springframework.boot:spring-boot-starter-test") {
         exclude(group = "org.junit.vintage", module = "junit-vintage-engine")
