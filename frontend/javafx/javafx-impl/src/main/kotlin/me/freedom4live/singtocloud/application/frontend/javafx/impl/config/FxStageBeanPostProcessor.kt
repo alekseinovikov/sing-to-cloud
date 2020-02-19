@@ -9,6 +9,8 @@ import org.springframework.util.ResourceUtils
 
 internal class FxStageBeanPostProcessor : BeanPostProcessor {
 
+    private val CLASSPATH_PREFIX = "classpath:"
+
     override fun postProcessBeforeInitialization(bean: Any, beanName: String): Any? = when (bean) {
         is AbstractFxStage -> processFxAnnotation(bean)
         else -> bean
@@ -20,19 +22,17 @@ internal class FxStageBeanPostProcessor : BeanPostProcessor {
                 else -> processFxAnnotationInternal(bean, fxAnnotation)
             }
 
-    private fun processFxAnnotationInternal(bean: AbstractFxStage, fxAnnotation: FxStage): AbstractFxStage {
+    private fun processFxAnnotationInternal(bean: AbstractFxStage, fxAnnotation: FxStage): AbstractFxStage = bean.run {
         val filePath = fxAnnotation.fxmlFile
-        val fxmlResourceURL = ResourceUtils.getURL("classpath:$filePath")
+        ResourceUtils.getURL("$CLASSPATH_PREFIX$filePath").let { fxmlUrl ->
+            val loadedParent = FXMLLoader().apply {
+                setController(bean)
+                location = fxmlUrl
+            }.run { load<Parent>() }
 
-        val loader = FXMLLoader()
-        loader.setController(bean)
-        loader.location = fxmlResourceURL
-
-        val loadedParent = loader.load<Parent>()
-
-        bean.stage = loadedParent
-
-        return bean
+            stage = loadedParent
+            return this
+        }
     }
 
 }
