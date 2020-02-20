@@ -1,5 +1,5 @@
 package me.freedom4live.singtocloud.source.api
 
-enum class TrackSourceType {
+enum class SourceType {
     LOCAL_FILESYSTEM
 }
