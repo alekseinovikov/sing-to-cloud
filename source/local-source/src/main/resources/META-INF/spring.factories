@@ -1,2 +1,2 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-  me.freedom4live.singtocloud.source.impl.LocalFilesystemSourceConfiguration
+  me.freedom4live.singtocloud.source.filesystem.LocalFilesystemSourceConfiguration
