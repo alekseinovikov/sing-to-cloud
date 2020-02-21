@@ -19,10 +19,6 @@ internal class LocalFilesystemTrackSourceTest {
     private lateinit var trackSource: LocalFilesystemTrackSource
 
     @Test
-    fun findTracks() {
-    }
-
-    @Test
     fun supportsShouldReturnFilesystem() {
         //act
         val result = trackSource.supports()
