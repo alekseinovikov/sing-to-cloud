@@ -1,5 +1,6 @@
 ![BUILD (Ubuntu 18.04)](https://github.com/freedom4live/sing-to-cloud/workflows/BUILD%20(Ubuntu%2018.04)/badge.svg)
 ![BUILD (MacOS)](https://github.com/freedom4live/sing-to-cloud/workflows/BUILD%20(MacOS)/badge.svg)
+![BUILD (Windows)](https://github.com/freedom4live/sing-to-cloud/workflows/BUILD%20(Windows)/badge.svg)
 
 # SingToCloud
 Helps to migrate local music library to Cloud (like Spotify)
