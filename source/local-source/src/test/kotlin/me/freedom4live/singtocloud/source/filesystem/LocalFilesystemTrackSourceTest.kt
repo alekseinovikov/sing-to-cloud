@@ -14,6 +14,7 @@ import org.mockito.Mock
 import org.mockito.Mockito
 import org.mockito.junit.jupiter.MockitoExtension
 import java.io.File
+import java.net.URL
 
 @ExtendWith(MockitoExtension::class)
 internal class LocalFilesystemTrackSourceTest {
@@ -100,5 +101,13 @@ internal class LocalFilesystemTrackSourceTest {
         Assertions.assertEquals(secondTrackInfo, result[1])
     }
 
-    private fun getResource(twoFilesDir: String) = this.javaClass.classLoader.getResource(twoFilesDir)!!
+    private fun getResource(filePath: String): URL {
+        return when (val url = this.javaClass.classLoader.getResource(filePath)) {
+            null -> {
+                println("CAN'T FIND THE FILE: $filePath")
+                throw IllegalArgumentException("Can't find file: $filePath")
+            }
+            else -> url
+        }
+    }
 }
