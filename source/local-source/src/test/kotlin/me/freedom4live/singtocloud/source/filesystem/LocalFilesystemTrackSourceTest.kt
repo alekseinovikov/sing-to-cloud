@@ -14,6 +14,7 @@ import org.mockito.Mock
 import org.mockito.Mockito
 import org.mockito.junit.jupiter.MockitoExtension
 import java.io.File
+import java.nio.file.Paths
 
 @ExtendWith(MockitoExtension::class)
 internal class LocalFilesystemTrackSourceTest {
@@ -106,7 +107,7 @@ internal class LocalFilesystemTrackSourceTest {
                 println("CAN'T FIND THE FILE: $filePath")
                 throw IllegalArgumentException("Can't find file: $filePath")
             }
-            else -> url.path.replace(":", "")
+            else -> Paths.get(url.toURI()).toString()
         }
     }
 }
