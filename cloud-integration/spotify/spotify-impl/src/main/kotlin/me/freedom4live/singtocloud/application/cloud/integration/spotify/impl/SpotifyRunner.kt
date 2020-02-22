@@ -16,7 +16,7 @@ class SpotifyRunner {
             .setRedirectUri(CLIENT_REDIRECT_URL)
             .build()
 
-    fun run(vararg args: String?) {
+    fun run() {
         val execute = api.authorizationCodeUri()
                 .scope(SCOPES)
                 .build()
