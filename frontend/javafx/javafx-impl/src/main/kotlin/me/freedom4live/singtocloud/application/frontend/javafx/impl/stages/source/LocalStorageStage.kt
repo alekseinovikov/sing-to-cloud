@@ -6,5 +6,4 @@ import me.freedom4live.singtocloud.source.api.TrackSourceType
 @FxStage("stages/LocalStorage.fxml")
 internal class LocalStorageStage : SourceStage() {
     override fun supports() = TrackSourceType.FILESYSTEM
-
 }
