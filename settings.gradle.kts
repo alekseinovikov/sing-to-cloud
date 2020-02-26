@@ -1,6 +1,8 @@
 rootProject.name = "sing-to-cloud"
 
 include(
+        ":core:media-type",
+
         ":application:application-javafx",
 
         ":frontend:javafx:javafx-api",
