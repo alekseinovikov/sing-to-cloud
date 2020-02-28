@@ -1,3 +1,3 @@
 dependencies {
-    implementation("org.apache.tika:tika-core:1.23")
+    api("org.apache.tika:tika-core:1.23")
 }
