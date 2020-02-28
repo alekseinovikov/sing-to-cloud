@@ -4,4 +4,4 @@ data class SongMetadata(val title: String?,
                         val artist: String?,
                         val album: String?,
                         val genre: String?,
-                        val composer: String?)
+                        val creator: String?)

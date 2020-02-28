@@ -15,17 +15,34 @@ internal object Mp3MetadataFinder : MetadataFinder {
     private val context = ParseContext()
     private val handler = DefaultHandler()
 
+    private val genreHeader = "genre"
+    private val albumHeader = "album"
+    private val artistHeader = "artist"
+    private val titleHeader = "title"
+    private val creatorHeader = "creator"
+
     override fun supports() = MediaType.MP3
 
     override fun find(file: File): SongMetadata {
         val metadata = FileInputStream(file).use { stream ->
-            val mp3Metadata = Mp3Metadata()
-
-            parser.parse(stream, handler, mp3Metadata, context)
-            mp3Metadata
+            Mp3Metadata().also { parser.parse(stream, handler, it, context) }
         }
 
-        return SongMetadata(null, null, null, null, null)
+        val genre = getMetadataFromHeaderSubstring(metadata, genreHeader)
+        val album = getMetadataFromHeaderSubstring(metadata, albumHeader)
+        val artist = getMetadataFromHeaderSubstring(metadata, artistHeader)
+        val title = getMetadataFromHeaderSubstring(metadata, titleHeader)
+        val creator = getMetadataFromHeaderSubstring(metadata, creatorHeader)
+
+        return SongMetadata(
+                title = title,
+                artist = artist,
+                genre = genre,
+                album = album,
+                creator = creator)
     }
+
+    private fun getMetadataFromHeaderSubstring(metadata: Mp3Metadata, header: String) =
+            metadata.names().first { it.contains(header, ignoreCase = true) }?.let { key -> metadata[key] }
 
 }
