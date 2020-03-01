@@ -35,4 +35,5 @@ internal class SongMetadataExtractorTest {
         Assertions.assertEquals("Impact Moderato", result.title)
         Assertions.assertEquals("Kevin MacLeod", result.creator)
     }
+
 }

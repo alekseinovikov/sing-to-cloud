@@ -3,6 +3,7 @@ rootProject.name = "sing-to-cloud"
 include(
         ":core:media-type",
         ":core:song-metadata",
+        ":core:id",
 
         ":application:application-javafx",
 
