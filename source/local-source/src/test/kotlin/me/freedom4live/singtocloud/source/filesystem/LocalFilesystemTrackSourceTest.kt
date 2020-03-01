@@ -82,8 +82,8 @@ internal class LocalFilesystemTrackSourceTest {
         val firstFile = File(firstFileString)
         val secondFile = File(secondFileString)
 
-        val firstTrackInfo = TrackResponse(1L, null, FileSystemFileInfo("1.txt", firstFileString))
-        val secondTrackInfo = TrackResponse(2L, null, FileSystemFileInfo("2.txt", secondFileString))
+        val firstTrackInfo = TrackResponse("1", null, FileSystemFileInfo("1.txt", firstFileString))
+        val secondTrackInfo = TrackResponse("2", null, FileSystemFileInfo("2.txt", secondFileString))
 
         Mockito.`when`(contentReader.readMetadataIfPossible(firstFile)).thenReturn(firstTrackInfo)
         Mockito.`when`(contentReader.readMetadataIfPossible(secondFile)).thenReturn(secondTrackInfo)
