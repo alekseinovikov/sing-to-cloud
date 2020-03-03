@@ -3,10 +3,19 @@ plugins {
     id("org.openjfx.javafxplugin")
 }
 
+javafx {
+    version = project.extra["javaFXVersion"].toString()
+    modules = listOf("javafx.web", "javafx.fxml")
+}
+
+tasks.bootJar {
+    enabled = true
+}
 
 dependencies {
     implementation("org.springframework.boot:spring-boot-starter")
     implementation("org.springframework.boot:spring-boot-starter-web")
+    implementation("no.tornado:tornadofx:${project.extra["tornadoFXVersion"]}")
 
     api(project(":frontend:javafx:javafx-api"))
 
@@ -17,13 +26,4 @@ dependencies {
     testImplementation("org.springframework.boot:spring-boot-starter-test") {
         exclude(group = "org.junit.vintage", module = "junit-vintage-engine")
     }
-}
-
-javafx {
-    version = "11.0.2"
-    modules = listOf("javafx.web", "javafx.fxml")
-}
-
-tasks.bootJar {
-    enabled = true
 }

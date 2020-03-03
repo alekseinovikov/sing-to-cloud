@@ -3,6 +3,10 @@ plugins {
 }
 
 javafx {
-    version = "11.0.2"
+    version = project.extra["javaFXVersion"].toString()
     modules = listOf("javafx.web", "javafx.fxml")
+}
+
+dependencies {
+    implementation("no.tornado:tornadofx:${project.extra["tornadoFXVersion"]}")
 }
