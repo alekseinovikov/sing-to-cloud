@@ -3,7 +3,7 @@ plugins {
 }
 
 javafx {
-    version = "11.0.2"
+    version = project.extra["javaFXVersion"].toString()
     modules = listOf("javafx.web", "javafx.fxml")
 }
 

@@ -5,7 +5,7 @@ include(
         ":core:song-metadata",
         ":core:id",
 
-        ":application:application-javafx",
+        ":application:javafx",
 
         ":frontend:javafx:javafx-api",
         ":frontend:javafx:javafx-impl",

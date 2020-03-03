@@ -1,3 +1,3 @@
 dependencies {
-    api("org.apache.tika:tika-core:1.23")
+    implementation("org.apache.tika:tika-core:${project.extra["apacheTikaVersion"]}")
 }

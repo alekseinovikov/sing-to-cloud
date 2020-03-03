@@ -10,6 +10,8 @@ plugins {
 
 allprojects {
     extra["tornadoFXVersion"] = "1.7.20"
+    extra["apacheTikaVersion"] = "1.23"
+    extra["javaFXVersion"] = "11.0.2"
 
     apply(plugin = "kotlin")
     apply(plugin = "kotlin-spring")
