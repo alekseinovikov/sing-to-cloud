@@ -9,6 +9,8 @@ plugins {
 }
 
 allprojects {
+    extra["tornadoFXVersion"] = "1.7.20"
+
     apply(plugin = "kotlin")
     apply(plugin = "kotlin-spring")
     apply(plugin = "java")

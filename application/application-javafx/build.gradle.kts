@@ -7,6 +7,7 @@ plugins {
 dependencies {
     implementation("org.springframework.boot:spring-boot-starter")
     implementation("org.springframework.boot:spring-boot-starter-web")
+    implementation("no.tornado:tornadofx:${project.extra["tornadoFXVersion"]}")
 
     api(project(":frontend:javafx:javafx-api"))
 
