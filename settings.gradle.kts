@@ -4,6 +4,7 @@ include(
         ":core:media-type",
         ":core:song-metadata",
         ":core:id",
+        ":core:translation",
 
         ":application:javafx",
 
