@@ -1,5 +1,6 @@
 plugins {
-    id("application")
+    id("org.springframework.boot")
+    id("io.spring.dependency-management")
     id("org.openjfx.javafxplugin")
 }
 
@@ -10,9 +11,6 @@ javafx {
 
 dependencies {
     implementation(project(":core"))
+    implementation("org.springframework.boot:spring-boot-starter")
     implementation("no.tornado:tornadofx:${project.extra["tornadoFXVersion"]}")
-}
-
-application {
-    mainClassName = "me.freedom4live.singtocloud.fx.application.TornadoFxApplicationKt"
 }

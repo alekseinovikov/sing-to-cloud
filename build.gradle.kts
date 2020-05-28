@@ -37,8 +37,9 @@ allprojects {
         implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
         implementation("org.springframework.boot:spring-boot-configuration-processor")
 
-        testImplementation("org.junit.jupiter:junit-jupiter")
-        testImplementation("org.mockito:mockito-junit-jupiter")
+        testImplementation("org.springframework.boot:spring-boot-starter-test") {
+            exclude(group = "org.junit.vintage", module = "junit-vintage-engine")
+        }
     }
 
 
